@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @crazysub
 - 👀 I’m interested in .Python
 - 🌱 I’m currently learning machine learning
-- 💞️ I’m looking to collaborate on a project to predict numbers of italian lottery "lotto"
+- 💞️ I’m looking to collaborate on a project to predict numbers of italian lottery "lotto", generating an historical archive of all the extract numbers from 1871.
 - 📫 How to reach me giambra_stefano@yahoo.it
 
 <!---
