@@ -3,7 +3,7 @@
 
 import datetime   # importo il modulo datetime per calcoloare l'anno corrente
 import string
-from urllib.request import urlopen
+import requests
 from bs4 import BeautifulSoup
 import csv
 import os.path
@@ -186,7 +186,7 @@ def archivio():
 			if (ultima < ad):		# se è di qualche anno prima
 				while ultima < (ad + 1):
 					pagina = percorso + str(ultima) + estensione
-					page = urlopen(pagina)
+					page = requests.get(pagina)
 					soup = BeautifulSoup(page, 'html.parser')
 
 					divisione = soup.find('div', attrs={'class': 'tabellaLotto-arch'})
@@ -221,7 +221,7 @@ def archivio():
 			else:		 # se è dello stesso anno
 				pagina = "http://www.estrazionedellotto.it/risultati/archivio-lotto-" + \
 				anno_ultimo_aggiornamento + ".asp" 
-				page = urlopen(pagina)
+				page = requests.get(pagina)
 				soup = BeautifulSoup(page, 'html.parser')
 
 				divisione = soup.find('div', attrs={'class': 'tabellaLotto-arch'})
@@ -265,7 +265,7 @@ def archivio():
 
 		while inizio < (fine + 1):
 			pagina = percorso + str(inizio) + estensione
-			page = urlopen(pagina)
+			page = requests.get(pagina)
 			soup = BeautifulSoup(page, 'html.parser')
 
 			divisione = soup.find('div', attrs={'class': 'tabellaLotto-arch'})
